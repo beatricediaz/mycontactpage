@@ -1,0 +1,354 @@
+/*This is my 201 Contact Web Page Project using Eric Meyer's reset at the top of my page -- your CSS starts on line 56 */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ---------- This is the beginning of my 201 Contact Web Page Project ------------ */
+
+header {
+    height: 33vh;
+    background: url(https://i.pinimg.com/originals/49/08/26/49082600cfc68b18d3f40aebedbd948d.gif) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1.00;
+}
+
+header .content {
+    z-index: 2;
+    text-align: center;
+}
+
+#logo {
+    width: 250px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); 
+    z-index: 1; 
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url("images/ateez-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.center {
+    width: 1000px;
+    padding: 40px;
+    margin: auto; 
+    background: black;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 5s; /* Fade in animation */
+    border: 2px solid rgb(241, 244, 245);
+    border-radius: 20ex;
+}
+
+/*this code is the arrow*/
+
+.center::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-top-color: rgba(0, 0, 0, 1); /* Match the bubble background color */
+	border-bottom: 0;
+	margin-left: -25px; /* Half the width of the border to center the arrow */
+	margin-bottom: -25px; /* Negative value of the border's width to pull the arrow outside the box */
+  
+}
+
+
+
+/* Fade in animations */
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+
+/* Styles for h1, h2, and p elements */
+h1 {
+    font-family: "adobe-handwriting-ernie", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    font-size: 2em;
+    margin: 0px auto 20px auto;
+    color: white;
+}
+
+h2 {
+    font-family: "adobe-handwriting-frank", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    font-size: 1.5em;
+    line-height: 1.2;
+    color: white;
+    margin: 0px auto 10px auto;
+}
+
+p {
+    font-family: "bilo", sans-serif;
+    font-weight: 700;    font-size: 1.2em;
+    line-height: 1.0;
+    color: white;
+}
+
+/* nagivation bar styles */
+.menu {
+	width: 1000px;
+    padding: 20px;
+    margin: 50vh auto 0; 
+	margin-top: 30px;
+	margin-bottom: 30px;
+    background: rgba(252, 252, 252, 0.75); /* Using opacity of 75% for the background color */
+	position: relative;
+    text-align: center;
+    animation: fadeIn 5s; /* Fade in code */
+    border: 5px solid rgb(241, 244, 245);
+	border-radius: 20ex
+	
+  }
+
+  
+  
+  .menu__link {
+	display: inline-block;
+	color: #001f31;
+	text-decoration: none;
+	position: relative;
+	padding: 14px 0;
+	font-family: "adobe-handwriting-tiffany", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 1;
+	letter-spacing: 0.040em;
+  }
+  
+  .menu__link svg {
+	fill: none;
+	stroke: #9f70c9;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+	stroke-dasharray: 338;
+	stroke-dashoffset: 338;
+	stroke-linecap: round;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: calc(100% + 60px);
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+	z-index: -1;
+  }
+  
+  .menu__link:hover svg,
+  .menu__link--active svg {
+	stroke-dashoffset: 0;
+	opacity: 1;
+	transition: opacity 0s, stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  
+/* Additional styles */
+
+/* Apply a border-box layout to all elements */
+* {
+	box-sizing: border-box; 
+  }
+  
+  /* Style the body element */
+  body {
+	padding-top: 50vh;
+
+
+	margin: 0; 
+	font-weight: 500;
+	font-family: 'HelveticaNeue';
+  }
+  
+  /* Style each section element */
+  section {
+	width: 100%;
+	padding: 0 7%;
+	display: table;
+	margin: 0;
+	max-width: none;
+	background-color: #373B44;
+	height: 100vh;
+  }
+  
+  /* Style every second section element */
+  section:nth-of-type(2n) {
+	background-color: #FE4B74;
+  }
+  
+  /* Style the .intro class */
+  .intro {
+	height: 90vh;
+  }
+  
+  /* Style the .content class */
+  .content {
+	display: table-cell;
+	vertical-align: middle;
+  }
+  
+  /* Style h1 elements */
+  h1 {
+	font-size: 3em;
+	display: block;
+	color: white;
+	font-weight: 300;
+  }
+  
+  /* Style p elements */
+  p {
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #C3CAD9;
+  }
+  
+  /* Style a elements */
+  a {
+	font-weight: 700;
+	color: #373B44;
+	position: relative;
+  }
+  
+  /* Add hover effect to a elements */
+  a:hover { 
+	opacity: 0.8;
+  }
+  
+  /* Add active effect to a elements */
+  a:active {
+	top: 1px;
+  }
+  
+  /* Style the footer element */
+  footer {
+	padding: 1% 5%;
+	text-align: center;
+	background-color: #373B44;
+	color: white;
+  }
+  
+  /* Style a elements inside footer */
+  footer a {
+	color: #FE4B74;
+	font-weight: 500;
+	text-decoration: none;
+  
+/* Infinity symbol styles */
+.infinity {
+	position: relative;
+	width: 106px;
+	height: 50px;
+	margin: 0 auto; /* Center the infinity symbol */
+	box-sizing: content-box;
+  }
+  
+  .infinity::before,
+  .infinity::after {
+	content: '';
+	box-sizing: content-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	border: 10px solid #32557f;
+	border-radius: 50px 50px 0 50px;
+	transform: rotate(-45deg);
+  }
+  
+  .infinity::after {
+	left: auto;
+	right: 0;
+	border-radius: 50px 50px 50px 0;
+	transform: rotate(45deg);
+  }
+/* ... */
