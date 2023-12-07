@@ -109,9 +109,14 @@ html, body {
 }
 
 .center {
-    width: 1000px;
-    padding: 40px;
-    margin: auto; 
+  max-width: 800px; /* Set a max-width that is appropriate for your design */
+  width: 90%; /* Use a percentage width for smaller screens */
+  margin: 40px auto; /* Center it with automatic margins and add some space above and below */
+  padding: 20px; /* Fixed padding */
+  background: rgba(252, 252, 252, 0.75); /* Semi-transparent white background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
     background: black;
     position: relative;
     text-align: center;
@@ -152,8 +157,8 @@ h1 {
     font-family: "adobe-handwriting-ernie", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-    font-size: 2em;
-    margin: 0px auto 20px auto;
+    font-size: 2vw;
+    margin: auto auto auto auto;
     color: white;
 }
 
@@ -161,50 +166,52 @@ h2 {
     font-family: "adobe-handwriting-frank", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-    font-size: 1.5em;
-    line-height: 1.2;
+    font-size: 1.5vw;
+    line-height: 1.0;
     color: white;
-    margin: 0px auto 10px auto;
+    margin: auto auto auto auto;
 }
 
 p {
     font-family: "bilo", sans-serif;
-    font-weight: 700;    font-size: 1.2em;
+    font-weight: 700;    
+    font-size: 1.2vw;
     line-height: 1.0;
     color: white;
 }
 
 /* nagivation bar styles */
 .menu {
-	width: 1000px;
-    padding: 20px;
-    margin: 50vh auto 0; 
-	margin-top: 30px;
-	margin-bottom: 30px;
-    background: rgba(252, 252, 252, 0.75); /* Using opacity of 75% for the background color */
-	position: relative;
-    text-align: center;
-    animation: fadeIn 5s; /* Fade in code */
-    border: 5px solid rgb(241, 244, 245);
-	border-radius: 20ex
-	
+  max-width: 800px; /* Set a max-width that you feel is appropriate for larger screens */
+  width: 90%; /* Use a percentage width for smaller screens */
+  margin: 40px auto; /* Center it with automatic margins and add some space above and below */
+  padding: 1em; /* Use em units for padding so it scales with the font size */
+  background: rgba(252, 252, 252, 0.75);
+  position: relative;
+  text-align: center;
+  border: 5px solid rgb(241, 244, 245);
+  border-radius: 20ex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
   }
 
   
   
   .menu__link {
-	display: inline-block;
-	color: #001f31;
-	text-decoration: none;
-	position: relative;
-	padding: 14px 0;
+    display: inline-block;
+    color: #001f31;
+    text-decoration: none;
+    padding: 14px 0;
+    font-size: 1em; /* Use em units to scale with the window size */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
 	font-family: "adobe-handwriting-tiffany", sans-serif;
 	font-weight: 600;
 	font-style: normal;
-	font-size: 2em;
+	font-size: 1.2em;
 	line-height: 1;
 	letter-spacing: 0.040em;
   }
+  
   
   .menu__link svg {
 	fill: none;
@@ -322,33 +329,5 @@ p {
 	font-weight: 500;
 	text-decoration: none;
   
-/* Infinity symbol styles */
-.infinity {
-	position: relative;
-	width: 106px;
-	height: 50px;
-	margin: 0 auto; /* Center the infinity symbol */
-	box-sizing: content-box;
-  }
-  
-  .infinity::before,
-  .infinity::after {
-	content: '';
-	box-sizing: content-box;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 30px;
-	height: 30px;
-	border: 10px solid #32557f;
-	border-radius: 50px 50px 0 50px;
-	transform: rotate(-45deg);
-  }
-  
-  .infinity::after {
-	left: auto;
-	right: 0;
-	border-radius: 50px 50px 50px 0;
-	transform: rotate(45deg);
   }
 /* ... */
